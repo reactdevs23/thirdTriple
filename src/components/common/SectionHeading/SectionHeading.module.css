@@ -1,0 +1,76 @@
+.heading {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 111.111%;
+}
+.xl5 {
+  font-size: 48px;
+}
+.xl3 {
+  font-size: 30px;
+}
+.xl2 {
+  font-size: 27px;
+}
+.bold {
+  font-weight: 700;
+}
+.base0 {
+  color: var(--Base-0);
+}
+.base800 {
+  color: var(--Base-800);
+}
+.base950 {
+  color: var(--Base-950);
+}
+
+.textCenter {
+  text-align: center;
+}
+@media only screen and (max-width: 1199px) {
+  .heading {
+    font-size: 34px;
+  }
+  .xl3 {
+    font-size: 27px;
+  }
+  .xl2 {
+    font-size: 25px;
+  }
+  .xl5 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .mobileCenter {
+    text-align: center;
+  }
+  .heading {
+    font-size: 32px;
+  }
+  .xl3 {
+    font-size: 27px;
+  }
+  .xl2 {
+    font-size: 25px;
+  }
+  .xl5 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .mobileCenter {
+    text-align: center;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .xl3 {
+    font-size: 25px;
+  }
+  .xl2 {
+    font-size: 22px;
+  }
+}

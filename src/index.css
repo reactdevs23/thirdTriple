@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+}
+:root {
+  --Base-0: #ffffff;
+  --Base-50: #f8f8f8;
+  --Base-100: #f2f2f2;
+
+  --Base-400: #9c9c9c;
+  --Base-500: #6b6b6b;
+
+  /* nes */
+  --Primary-Default: #2969ff;
+  --Base-0: #ffffff;
+  --Base-50: #f9fafb;
+  --Base-100: #f3f4f6;
+  --Base-200: #e5e7eb;
+  --Base-400: #9ca3af;
+  --Base-500: #6b7280;
+  --Base-600: #4b5563;
+  --Base-700: #374151;
+  --Base-800: #1f2937;
+  --Base-900: #111827;
+  --Base-950: #030712;
+}
+body {
+  padding: 0;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3;
+}
+button:hover {
+  opacity: 0.7;
+}
+
+.container {
+  max-width: 1199px;
+  width: 90%;
+  margin: 0 auto;
+}
+.paddingTop {
+  padding-top: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .paddingTop {
+    padding-top: 110px;
+  }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Firefox */
+.overflow {
+  scrollbar-width: thin;
+  scrollbar-color: var(--Primary-Default) rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+/* Chrome, Edge, and Safari */
+.overflow::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 5px;
+}
+
+.overflow::-webkit-scrollbar-track {
+  background: rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background: var(--Primary-Default);
+  border-radius: 100vh;
+  border: none;
+  border-radius: 5px;
+}

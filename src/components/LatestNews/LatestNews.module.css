@@ -1,0 +1,123 @@
+.wrapper {
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+  background: var(--Base-0);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.badge {
+  border-radius: 32px;
+  background: rgba(41, 105, 255, 0.1);
+  padding: 2px 12px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px 18px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  border-radius: 24px;
+  background: linear-gradient(180deg, #f3f4f6 0%, #fff 100%);
+  padding: 8px;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+}
+.infoContainer .title {
+  max-width: 480px;
+}
+
+.readMore {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--Primary-Default);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155.556%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.readMore:hover {
+  transform: translateY(-3px);
+}
+.readMore .arrow {
+  font-size: 20px;
+  color: var(--Primary-Default);
+  cursor: pointer;
+  margin-top: 2px;
+}
+.imgContainer {
+  width: 100%;
+}
+.img {
+  width: 100%;
+  border-radius: 16px;
+}
+@media only screen and (max-width: 1199px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 991px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .infoContainer {
+    padding: 15px 18px;
+    gap: 12px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    padding: 80px 0;
+  }
+  .container {
+    gap: 48px;
+  }
+  .card {
+    padding: 8px;
+    border-radius: 18px;
+  }
+  .infoContainer {
+    padding: 8px;
+  }
+  .img {
+    border-radius: 18px;
+  }
+  .readMore {
+    font-size: 14px;
+  }
+}

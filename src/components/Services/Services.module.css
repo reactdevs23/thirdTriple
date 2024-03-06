@@ -1,0 +1,121 @@
+.wrapper {
+  background: var(--Base-50);
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.container {
+  columns: 2;
+  column-gap: 48px;
+  position: relative;
+  z-index: 1;
+}
+/* .container::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
+  border: 1px solid var(--Base-800);
+  z-index: -1;
+} */
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  break-inside: avoid;
+  margin-bottom: 52px;
+}
+
+.badge {
+  border-radius: 32px;
+  background: rgba(41, 105, 255, 0.06);
+  padding: 2px 12px;
+}
+
+.service {
+  border-radius: 12px;
+  background: var(--Base-0);
+  padding: 8px;
+  box-shadow: 0px 40px 64px -32px rgba(3, 7, 18, 0.12);
+
+  break-inside: avoid;
+  margin-bottom: 48px;
+}
+.service:last-child {
+  margin-bottom: 50px;
+}
+.imgContainer {
+  background: var(--Base-100);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.img {
+  margin-top: 24px;
+  max-width: 360px;
+  width: 100%;
+  display: block;
+}
+.infoContainer {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.button {
+  margin: 0 auto;
+}
+.arrow {
+  font-size: 18px;
+}
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    gap: 36px;
+  }
+  .container {
+    column-gap: 30px;
+  }
+  .infoContainer {
+    padding: 24px;
+  }
+  .service {
+    margin-bottom: 36px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    gap: 0px;
+  }
+  .container {
+    columns: 1;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .headingContainer {
+    align-items: center;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 36px;
+  }
+  .heading,
+  .tagline {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .infoContainer {
+    padding: 20px;
+    padding-top: 24px;
+  }
+}

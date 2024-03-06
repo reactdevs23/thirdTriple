@@ -1,0 +1,130 @@
+.wrapper {
+  padding: 100px 0;
+  background: var(--Base-950);
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 790px;
+  margin: 0 auto;
+}
+.badge {
+  border-radius: 32px;
+  background: rgba(41, 105, 255, 0.1);
+  padding: 2px 12px;
+}
+.container {
+  max-width: 790px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+.card {
+  margin: 0 auto;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  border-radius: 24px;
+  border-radius: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(
+    180deg,
+    rgba(41, 105, 255, 0.1) 0%,
+    rgba(41, 105, 255, 0) 100%
+  );
+  padding: 48px;
+}
+.evenCard {
+  flex-direction: row-reverse;
+}
+.img {
+  max-width: 200px;
+  width: 100%;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.button {
+  margin-top: 10px;
+}
+.arrow {
+  font-size: 18px;
+}
+.readMore {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--Primary-Default);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155.556%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.readMore:hover {
+  transform: translateY(-3px);
+}
+.readMore .arrow {
+  font-size: 20px;
+  color: var(--Primary-Default);
+  cursor: pointer;
+  margin-top: 2px;
+}
+@media only screen and (max-width: 991px) {
+  .mainContainer {
+    gap: 48px;
+  }
+  .card {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 60px 0;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .evenCard {
+    flex-direction: column;
+  }
+  .img {
+    max-width: 170px;
+  }
+  .textContainer {
+    align-items: center;
+  }
+  .title {
+    text-align: center;
+  }
+  .info {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .card {
+    padding: 28px 18px;
+  }
+  .readMore {
+    font-size: 14px;
+  }
+}
