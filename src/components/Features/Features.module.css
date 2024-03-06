@@ -79,6 +79,7 @@
   .wrapper {
     padding: 60px 0;
   }
+
   .card {
     padding: 18px;
     gap: 10px;
@@ -86,6 +87,16 @@
 }
 
 @media only screen and (max-width: 520px) {
+  .headingContainer {
+    align-items: start;
+  }
+  .badge {
+    margin: 0;
+  }
+  .heading,
+  .tagline {
+    text-align: left;
+  }
   .card {
     flex-direction: column;
     gap: 12px;

@@ -3,13 +3,16 @@ import { TbArrowUpRight } from "react-icons/tb";
 import { IoMdClose } from "react-icons/io";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import classes from "./Navbar.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { logo } from "../../images";
 import { Button } from "../common";
 
 import clsx from "clsx";
+import { useMyContext } from "../../Context/Context";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const { handleJoinWaitingList } = useMyContext();
   const [sidebar, setSidebar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -56,13 +59,12 @@ const Navbar = () => {
   // ];
 
   const navItems = [
-    { navItem: "Features", to: "/features" },
-    { navItem: "Cards", to: "/cards" },
-    { navItem: "Services", to: "/services" },
-    { navItem: "Security", to: "/security" },
-    { navItem: "News", to: "/news" },
-    { navItem: "Faq", to: "/faq" },
-    { navItem: "How to", to: "/howto" },
+    { navItem: "Features", to: "features" },
+    { navItem: "Cards", to: "cards" },
+    { navItem: "Services", to: "services" },
+    { navItem: "Security", to: "security" },
+    { navItem: "News", to: "news" },
+    { navItem: "Faq", to: "faq" },
   ];
 
   return (
@@ -70,30 +72,31 @@ const Navbar = () => {
       className={[classes.wrapper, isScrolled && classes.wrapperBg].join(" ")}
     >
       <header className={[classes.header, "container"].join(" ")}>
-        <Link
+        <NavLink
           className={[classes.logoContainer].join(" ")}
           to="/"
           onClick={() => setSidebar((prev) => !prev)}
         >
           {" "}
           <img src={logo} alt="#" className={classes.logo} />
-        </Link>
+        </NavLink>
         <div
           className={[classes.navItems, sidebar && classes.sidebar].join(" ")}
         >
           {navItems.map((el, i) => (
-            <NavLink
+            <Link
               key={i}
               to={el.to}
+              activeClass={classes.navActive}
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={1500}
               onClick={() => setSidebar(false)}
-              className={({ isActive }) =>
-                isActive
-                  ? clsx(classes.navItem, classes.navActive)
-                  : classes.navItem
-              }
+              className={classes.navItem}
             >
               {el.navItem}
-            </NavLink>
+            </Link>
           ))}
 
           <Button
@@ -101,7 +104,7 @@ const Navbar = () => {
             iconBtn
             size="lg"
             className={classes.button}
-            onClick={() => {}}
+            onClick={handleJoinWaitingList}
             mlAuto
           >
             Join Waiting List <TbArrowUpRight className={classes.arrow} />

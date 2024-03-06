@@ -5,7 +5,9 @@ import clsx from "clsx";
 import { Text, Button, Highlight } from "../common";
 import { appStore, heroImg, playStore } from "../../images";
 import Features from "./Facility/Facility";
+import { useMyContext } from "../../Context/Context";
 const HeroSection = () => {
+  const { handleJoinWaitingList } = useMyContext();
   return (
     <div className={classes.wrapper}>
       <div className={clsx("container", classes.container, "paddingTop")}>
@@ -34,7 +36,7 @@ const HeroSection = () => {
               iconBtn
               size="lg"
               className={classes.button}
-              onClick={() => {}}
+              onClick={handleJoinWaitingList}
             >
               Join Waiting List <TbArrowUpRight className={classes.arrow} />
             </Button>

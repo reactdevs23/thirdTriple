@@ -87,17 +87,38 @@
   }
 
   .qrCodeContainer {
-    position: static;
+    display: none;
   }
 }
 @media only screen and (max-width: 767px) {
-  .buttonContainer {
-    flex-direction: column-reverse;
-  }
   .headingContainer {
     gap: 16px;
   }
   .content {
     gap: 22px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .container {
+    padding: 30px 12px;
+  }
+  .downloadContainer {
+    gap: 5px;
+  }
+  .buttonContainer {
+    gap: 8px;
+  }
+
+  .buttonContainer .button {
+    font-size: 14px;
+    min-height: 40px;
+    padding: 10px 15px;
+  }
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+  }
+  .icon {
+    max-width: 22px;
   }
 }

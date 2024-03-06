@@ -1,12 +1,14 @@
 import React from "react";
 import { TbArrowUpRight } from "react-icons/tb";
-import classes from "./UnlockCapabilities.module.css";
+import classes from "./Features.module.css";
 import clsx from "clsx";
 import { Text, SectionHeading, Highlight, Button } from "../common";
 import { intelligent, tracking, alert, investment, goal } from "../../images";
+import { useMyContext } from "../../Context/Context";
 
-const UnlockCapabilities = () => {
-  const capabilities = [
+const Features = () => {
+  const { handleJoinWaitingList } = useMyContext();
+  const features = [
     {
       img: intelligent,
       title: "Intelligent Budgeting",
@@ -34,26 +36,26 @@ const UnlockCapabilities = () => {
     },
   ];
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="features">
       <div className={clsx("container", classes.container)}>
         <div className={classes.headingContainer}>
           <Text lg semiBold primaryDefault className={classes.badge}>
             Features
           </Text>{" "}
-          <SectionHeading textCenter>
+          <SectionHeading textCenter className={classes.heading}>
             Unlock Powerful Capabilities:
             <br />
             <Highlight>
               <strong>Explore Key Features</strong>
             </Highlight>
           </SectionHeading>
-          <Text xl base800 textCenter>
+          <Text xl base800 textCenter className={classes.tagline}>
             Discover the myriad functionalities and tools within TriplePay
             designed to simplify financial management.
           </Text>
         </div>
         <div className={classes.capabilities}>
-          {capabilities.map((el, i) => (
+          {features.map((el, i) => (
             <div className={classes.card} key={i}>
               <img src={el.img} alt="#" className={classes.img} />
               <div className={classes.titleAndInfo}>
@@ -73,7 +75,7 @@ const UnlockCapabilities = () => {
           iconBtn
           size="lg"
           className={classes.button}
-          onClick={() => {}}
+          onClick={handleJoinWaitingList}
         >
           Join Waiting List <TbArrowUpRight className={classes.arrow} />
         </Button>
@@ -82,4 +84,4 @@ const UnlockCapabilities = () => {
   );
 };
 
-export default UnlockCapabilities;
+export default Features;

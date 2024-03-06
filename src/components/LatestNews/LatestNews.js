@@ -30,19 +30,19 @@ const LatestNews = () => {
     },
   ];
   return (
-    <section className={classes.wrapper}>
+    <section className={classes.wrapper} id="news">
       <div className={clsx("container", classes.container)}>
         <div className={classes.headingContainer}>
           <Text lg semiBold primaryDefault className={classes.badge}>
             News
           </Text>{" "}
-          <SectionHeading base950 textCenter>
+          <SectionHeading base950 textCenter className={classes.heading}>
             Stay Informed with{" "}
             <Highlight>
               <strong>Latest News</strong>
             </Highlight>
           </SectionHeading>
-          <Text xl base800 textCenter>
+          <Text xl base800 textCenter className={classes.tagline}>
             Dive into our latest news and blog posts to uncover insightful
             analyses, breaking stories, and thought-provoking commentary.
           </Text>
@@ -66,7 +66,7 @@ const LatestNews = () => {
                   rel="noreferrer"
                   className={classes.readMore}
                 >
-                  Read More <GoArrowRight className={classes.arrow} />
+                  View More News <GoArrowRight className={classes.arrow} />
                 </a>
               </div>
             </div>

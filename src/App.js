@@ -1,16 +1,32 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+
+import JoinModal from "./Modals/JoinModal/JoinModal";
+
+import { useMyContext } from "./Context/Context";
+
+import Whitelist from "./pages/Whitelist/Whitelist";
+import MainLayout from "./components/Layout/MainLayout";
+import WhitlistLaout from "./components/Layout/Whitelist/WhitelistLayout";
 
 function App() {
+  const { isJoinWaitingListModalActive, setIsJoinWaitingListModalActive } =
+    useMyContext();
   return (
     <>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route path="" element={<Home />} />
+        </Route>{" "}
+        <Route path="/" element={<WhitlistLaout />}>
+          <Route path="whitelist" element={<Whitelist />} />
+        </Route>
       </Routes>
-      <Footer />
+
+      <JoinModal
+        isActive={isJoinWaitingListModalActive}
+        onClose={() => setIsJoinWaitingListModalActive(false)}
+      />
     </>
   );
 }

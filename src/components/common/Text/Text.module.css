@@ -115,12 +115,18 @@
   .xl2 {
     font-size: 20px;
   }
+  .lg {
+    font-size: 16px;
+  }
 }
 @media only screen and (max-width: 520px) {
   .lg {
     font-size: 16px;
   }
   .xl {
+    font-size: 18px;
+  }
+  .xl2 {
     font-size: 18px;
   }
   .xl5 {

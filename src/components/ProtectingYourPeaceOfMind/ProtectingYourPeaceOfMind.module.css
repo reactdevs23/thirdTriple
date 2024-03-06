@@ -55,14 +55,9 @@
   .img {
     max-width: 200px;
   }
+
   .textContainer {
-    align-items: center;
-  }
-  .title {
-    text-align: center;
-  }
-  .info {
-    text-align: center;
+    align-items: flex-start;
   }
 }
 @media only screen and (max-width: 520px) {

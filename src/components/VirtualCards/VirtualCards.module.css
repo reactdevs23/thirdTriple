@@ -97,6 +97,16 @@ Simply rotates the carousel around the Y axis by using rotateY and starting at i
   }
 }
 @media only screen and (max-width: 520px) {
+  .headingContainer {
+    align-items: flex-start;
+  }
+  .badge {
+    margin: 0;
+  }
+  .heading,
+  .info {
+    text-align: left;
+  }
   .carousel {
     animation: 50s steps(10000, end) infinite;
     min-height: auto;

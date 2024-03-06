@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "../../components/HeroSection/HeroSection";
-import UnlockCapabilities from "../../components/UnlockCapabilities/UnlockCapabilities";
+import UnlockCapabilities from "../../components/Features/Features";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import ReferAndEarn from "../../components/ReferAndEarn/ReferAndEarn";
 import PreRegister from "../../components/PreRegister/PreRegister";

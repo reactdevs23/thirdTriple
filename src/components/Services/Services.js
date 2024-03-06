@@ -9,8 +9,10 @@ import {
   monthlyUsage,
 } from "../../images";
 import classes from "./Services.module.css";
+import { useMyContext } from "../../Context/Context";
 
 const Services = () => {
+  const { handleJoinWaitingList } = useMyContext();
   const services = [
     {
       img: account,
@@ -32,19 +34,9 @@ const Services = () => {
       title: "Instant Payout Section",
       info: "Transform your crypto into cash instantly. With TriplePay, you're always just a few clicks away from converting your cryptocurrency into your local currency and transferring it directly into your account. Fast, fluid, and secure — liquidity on your terms.",
     },
-    {
-      img: instantlyPayout,
-      title: "Instant Payout Section",
-      info: "Transform your crypto into cash instantly. With TriplePay, you're always just a few clicks away from converting your cryptocurrency into your local currency and transferring it directly into your account. Fast, fluid, and secure — liquidity on your terms.",
-    },
-    {
-      img: instantlyPayout,
-      title: "Instant Payout Section",
-      info: "Transform your crypto into cash instantly. With TriplePay, you're always just a few clicks away from converting your cryptocurrency into your local currency and transferring it directly into your account. Fast, fluid, and secure — liquidity on your terms.",
-    },
   ];
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="services">
       <div className={clsx(classes.container, "container")}>
         <div className={classes.headingContainer}>
           <Text lg semiBold primaryDefault className={classes.badge}>
@@ -78,16 +70,16 @@ const Services = () => {
             </div>
           ))}{" "}
         </div>{" "}
+        <Button
+          btnPrimary
+          iconBtn
+          size="lg"
+          className={classes.button}
+          onClick={handleJoinWaitingList}
+        >
+          Join Waiting List <TbArrowUpRight className={classes.arrow} />
+        </Button>
       </div>{" "}
-      <Button
-        btnPrimary
-        iconBtn
-        size="lg"
-        className={classes.button}
-        onClick={() => {}}
-      >
-        Join Waiting List <TbArrowUpRight className={classes.arrow} />
-      </Button>
     </div>
   );
 };

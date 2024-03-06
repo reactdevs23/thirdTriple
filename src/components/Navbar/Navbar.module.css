@@ -44,9 +44,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
+  cursor: pointer;
 }
 .navActive {
-  opacity: 1;
+  color: var(--Primary-Default);
 }
 
 .buttonContainer {
@@ -75,6 +76,9 @@
   }
   .header {
     width: calc(100% - 48px);
+  }
+  .logoContainer {
+    border: none;
   }
   .navItems {
     flex-direction: column;

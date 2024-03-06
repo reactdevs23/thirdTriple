@@ -26,16 +26,16 @@ const ExploreSecurity = () => {
     },
   ];
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="security">
       <div className={clsx("container", classes.mainContainer)}>
         <div className={classes.headingContainer}>
           <Text lg semiBold primaryDefault className={classes.badge}>
             Security
           </Text>{" "}
-          <SectionHeading base0 textCenter>
+          <SectionHeading base0 textCenter className={classes.heading}>
             Explore Our Security Measures
           </SectionHeading>
-          <Text xl base400 textCenter>
+          <Text xl base400 textCenter className={classes.info}>
             Dive into our comprehensive security section, where your safety is
             our priority. Discover the robust measures we've implemented to
             protect your data and transactions, ensuring a worry-free experience

@@ -1,0 +1,177 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  padding-bottom: 60px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+
+  max-width: 790px;
+  margin: 0 auto;
+}
+.formContainer,
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 276px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  color: var(--Base-800);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155.556%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: var(--Base-50);
+  padding: 12px 16px;
+}
+.formContainer .button {
+  width: 100%;
+  border-radius: 10px;
+}
+.referContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.referHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.referHeader .referTitle {
+  font-weight: 500;
+}
+.referHeader .earnedPoint {
+  margin-left: auto;
+  color: var(--Base-900);
+}
+.earnedPoint span {
+  color: var(--Base-900);
+  font-weight: 500;
+}
+.referListContainer {
+  max-height: 460px;
+  overflow-y: auto;
+}
+.referList {
+  display: grid;
+  grid-template-columns: 50px 1fr 60px;
+  gap: 12px;
+  align-items: start;
+  border: 1px solid var(--Base-100);
+  border-radius: 10px;
+}
+
+.referList {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #f3f4f6;
+  background: linear-gradient(180deg, #f9fafb 0%, #fff 100%);
+}
+
+.id {
+  min-width: 30px;
+}
+.status {
+  display: flex;
+  justify-content: flex-end;
+}
+.joined {
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: var(--Primary-Default);
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133.333%;
+}
+.copyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+}
+.copyIcon {
+  color: var(--Base-0);
+  font-size: 20px;
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr;
+    max-width: 576px;
+    gap: 50px;
+  }
+  .wrapper,
+  .formContainer {
+    gap: 20px;
+  }
+  .formContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    max-width: 100%;
+  }
+  .headingContainer {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+  .buttonText {
+    display: none;
+  }
+  .copyIcon {
+    display: block;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  .form .button {
+    padding: 12px 12px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .input {
+    font-size: 16px;
+  }
+  .referList {
+    max-height: 300px;
+  }
+  .userName {
+    font-size: 14px;
+  }
+  .referHeader .referTitle,
+  .referHeader .earnedPoint {
+    font-size: 12px;
+  }
+}

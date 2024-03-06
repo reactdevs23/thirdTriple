@@ -185,8 +185,15 @@
 }
 @media only screen and (max-width: 991px) {
   .footer {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 50px 24px;
+  }
+  .downloadContainer {
+    grid-column: 1/-1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
   }
   .bottomBar {
     flex-direction: column;
@@ -215,15 +222,21 @@
     align-items: center;
     justify-content: center;
   }
-}
-@media only screen and (max-width: 640px) {
   .footer {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
   }
-
+}
+@media only screen and (max-width: 640px) {
+}
+@media only screen and (max-width: 520px) {
   .certifiedContainer {
     grid-template-columns: 1fr;
-    gap: 20px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #fff 0%, #f9fafb 100%);
+    padding: 20px;
   }
 }
 @media only screen and (max-width: 380px) {

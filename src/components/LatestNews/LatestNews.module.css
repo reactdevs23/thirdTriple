@@ -82,30 +82,56 @@
 @media only screen and (max-width: 1199px) {
   .content {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 991px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
-    max-width: 550px;
-    margin: 0 auto;
   }
   .infoContainer {
-    padding: 15px 18px;
+    padding: 0;
     gap: 12px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
   }
 }
 @media only screen and (max-width: 767px) {
   .wrapper {
     padding: 60px 0;
   }
+  .infoContainer {
+    padding: 15px 18px;
+    gap: 12px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px;
+  }
 }
 @media only screen and (max-width: 520px) {
   .wrapper {
     padding: 80px 0;
   }
+
   .container {
-    gap: 48px;
+    gap: 40px;
+  }
+  .headingContainer {
+    align-items: flex-start;
+  }
+  .heading,
+  .tagline {
+    text-align: left;
   }
   .card {
     padding: 8px;

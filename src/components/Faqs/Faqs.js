@@ -40,13 +40,13 @@ const faqs = [
 const Faqs = () => {
   const [activeFaq, setActiveFaq] = useState();
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="faq">
       <div className={clsx(classes.container, "container")}>
         <div className={classes.headingContainer}>
           <Text lg semiBold primaryDefault className={classes.badge}>
             FAQs
           </Text>{" "}
-          <SectionHeading xl5 base950 textCenter>
+          <SectionHeading xl5 base950 textCenter className={classes.heading}>
             Frequently Asked Questions
           </SectionHeading>
         </div>

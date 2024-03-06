@@ -110,3 +110,14 @@
     justify-content: center;
   }
 }
+@media only screen and (max-width: 380px) {
+  .buttonContainer .button {
+    font-size: 15px;
+    padding: 12px 16px;
+    min-height: 45px;
+  }
+}
+.iconContainer {
+  width: 45px;
+  height: 45px;
+}

@@ -34,18 +34,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding: 15px;
   }
   .img {
     max-width: 200px;
   }
   .textContainer {
-    align-items: center;
-  }
-  .title {
-    text-align: center;
-  }
-  .info {
-    text-align: center;
+    align-items: start;
+    gap: 12px;
   }
 }

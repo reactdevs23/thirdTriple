@@ -29,21 +29,21 @@ const WhatCanYouDo = () => {
     <section className={classes.wrapper}>
       <div className={clsx("container", classes.container)}>
         <div className={classes.headingContainer}>
-          <SectionHeading base950 textCenter>
+          <SectionHeading base950 textCenter className={classes.heading}>
             What Can You Do with{" "}
             <Highlight>
               Triple
               <strong>Pay</strong>
             </Highlight>
           </SectionHeading>
-          <Text xl base800 textCenter>
+          <Text xl base800 textCenter className={classes.tagline}>
             Discover the endless possibilities with TriplePay! From seamless
             transactions to unparalleled convenience, TriplePay empowers you to
             manage your finances like never before.
           </Text>
         </div>
         <div className={classes.content}>
-          {data.map(({ img, title, info, readMore }, i) => (
+          {data.map(({ img, title, info }, i) => (
             <div className={clsx(classes.card)} key={i}>
               <div className={classes.imgContainer}>
                 <img src={img} alt="#" className={classes.img} />

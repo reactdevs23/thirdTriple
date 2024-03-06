@@ -39,33 +39,27 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   .img {
     max-width: 200px;
   }
   .textContainer {
-    align-items: center;
-  }
-  .title {
-    text-align: center;
-  }
-  .info {
-    text-align: center;
+    align-items: flex-start;
   }
 }
 @media only screen and (max-width: 520px) {
   .container {
-    padding: 24px;
+    padding: 15px;
   }
   .buttonContainer {
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
-    gap: 0;
+    gap: 5px;
   }
   .buttonContainer .button {
     width: 100%;
     justify-content: center;
+    padding: 11px 15px;
   }
 }

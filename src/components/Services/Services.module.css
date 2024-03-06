@@ -48,16 +48,8 @@
 .service:last-child {
   margin-bottom: 50px;
 }
-.imgContainer {
-  background: var(--Base-100);
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
+
 .img {
-  margin-top: 24px;
-  max-width: 360px;
   width: 100%;
   display: block;
 }
@@ -69,6 +61,7 @@
 }
 .button {
   margin: 0 auto;
+  margin-top: 90px;
 }
 .arrow {
   font-size: 18px;
@@ -93,19 +86,15 @@
   }
   .container {
     columns: 1;
-    max-width: 650px;
+    max-width: 560px;
     margin: 0 auto;
   }
   .headingContainer {
-    align-items: center;
+    align-items: flex-start;
     max-width: 550px;
-    margin-left: auto;
+
     margin-right: auto;
     margin-bottom: 36px;
-  }
-  .heading,
-  .tagline {
-    text-align: center;
   }
 }
 @media only screen and (max-width: 767px) {

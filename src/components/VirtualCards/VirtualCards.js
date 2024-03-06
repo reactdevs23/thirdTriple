@@ -4,8 +4,10 @@ import classes from "./VirtualCards.module.css";
 import { cardImg } from "../../images";
 import { Button, SectionHeading, Text } from "../common";
 import clsx from "clsx";
+import { useMyContext } from "../../Context/Context";
 
 const Carousel = () => {
+  const { handleJoinWaitingList } = useMyContext();
   let images = [cardImg, cardImg, cardImg];
 
   // If there are fewer than 9 images, repeat existing images
@@ -14,15 +16,15 @@ const Carousel = () => {
   }
 
   return (
-    <div className={classes.carouselWrapper}>
+    <div className={classes.carouselWrapper} id="cards">
       <div className={clsx(classes.headingContainer, "container")}>
         <Text lg semiBold primaryDefault className={classes.badge}>
           Cards
         </Text>
-        <SectionHeading base0 textCenter>
+        <SectionHeading base0 textCenter className={classes.heading}>
           Introducing Virtual Cards
         </SectionHeading>
-        <Text xl base400 textCenter>
+        <Text xl base400 textCenter className={classes.info}>
           Unlock a new era of transactions with our virtual cards.
         </Text>
       </div>
@@ -42,7 +44,7 @@ const Carousel = () => {
         iconBtn
         size="lg"
         className={classes.button}
-        onClick={() => {}}
+        onClick={handleJoinWaitingList}
       >
         Join Waiting List <TbArrowUpRight className={classes.arrow} />
       </Button>

@@ -49,6 +49,11 @@
   color: var(--Primary-Default);
   background: var(--Base-0);
 }
+.btn.btnGray {
+  color: var(--Base-800);
+  background: var(--Base-50);
+}
+
 .btn.btnBlack {
   color: var(--Base-0);
 

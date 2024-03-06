@@ -1,0 +1,33 @@
+.wrapper {
+  background: var(--Base-0);
+  position: fixed;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.header .button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.arrow {
+  font-size: 20px;
+}
+@media only screen and (max-width: 520px) {
+  .logo {
+    max-width: 120px;
+  }
+  .header .button {
+    gap: 8px;
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+  .arrow {
+    font-size: 18px;
+  }
+}

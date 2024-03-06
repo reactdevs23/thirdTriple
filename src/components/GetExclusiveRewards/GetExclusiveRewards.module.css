@@ -58,20 +58,11 @@
 
   .row {
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .img {
     max-width: 200px;
-  }
-  .textContainer {
-    align-items: center;
-  }
-  .title {
-    text-align: center;
-  }
-  .info {
-    text-align: center;
   }
 }

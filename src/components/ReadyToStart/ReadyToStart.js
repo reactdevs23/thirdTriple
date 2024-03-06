@@ -4,8 +4,10 @@ import classes from "./ReadyToStart.module.css";
 import clsx from "clsx";
 import { Button, SectionHeading, Text } from "../common";
 import { appStore, playStore, qrCode } from "../../images";
+import { useMyContext } from "../../Context/Context";
 
 const ReadyToStart = () => {
+  const { handleJoinWaitingList } = useMyContext();
   return (
     <div className={classes.wrapper}>
       <div className={clsx("container", classes.container)}>
@@ -25,7 +27,7 @@ const ReadyToStart = () => {
               btnWhite
               size="lg"
               className={classes.button}
-              onClick={() => {}}
+              onClick={handleJoinWaitingList}
             >
               Join Waiting List <TbArrowUpRight className={classes.arrow} />
             </Button>
