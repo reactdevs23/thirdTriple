@@ -27,7 +27,10 @@
   flex-direction: column;
   gap: 12px;
 }
-
+.form .button {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
 .input {
   color: var(--Base-400);
   font-size: 18px;
