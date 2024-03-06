@@ -83,7 +83,7 @@
     padding: 0 24px;
     gap: 0px;
     min-height: 100vh;
-    background: var(--Base-0);
+    background: #fffbf6;
     transform: translateX(250%);
     transition: 0.3s;
     position: fixed;
